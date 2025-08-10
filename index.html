@@ -85,9 +85,9 @@
         }
         .nav-logo img {
             height: 50px;
-            width: 50px; /* Added for perfect circle */
+            width: 50px;
             border-radius: 50%;
-            object-fit: cover; /* Ensures image covers the area */
+            object-fit: cover;
         }
         .nav-logo .logo-text {
             font-size: 1.5rem;
@@ -127,7 +127,7 @@
 
         /* --- Hero Section --- */
         .hero {
-            background: linear-gradient(rgba(10, 38, 71, 0.7), rgba(10, 38, 71, 0.7)), url('images/hero-background.jpg');
+            background: linear-gradient(rgba(30, 41, 59, 0.7), rgba(30, 41, 59, 0.7)), url('images/hero-background.jpg') no-repeat center center/cover;
             color: var(--white-color);
             text-align: center;
             padding: 140px 20px;
@@ -722,6 +722,30 @@
             height: 100%;
             border: none;
         }
+        
+        /* Privacy Policy Popup */
+        #privacy-popup .popup-content {
+            max-width: 800px;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        .privacy-content-inner {
+            overflow-y: auto; /* Makes the content scrollable */
+            padding-right: 20px; /* For scrollbar spacing */
+        }
+        #privacy-popup h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        #privacy-popup p, #privacy-popup li {
+            margin-bottom: 15px;
+        }
+        #privacy-popup ul {
+            padding-left: 20px;
+        }
 
         /* --- Responsive Design --- */
         @media (max-width: 992px) {
@@ -749,6 +773,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#">
+                    <img src="images/Logo.jpg" alt="CUET HUNTERS Logo">
                     <span class="logo-text">CUET HUNTERS</span>
                 </a>
             </div>
@@ -846,7 +871,7 @@
                             <span class="stat">🎬 20+ Videos</span>
                             <span class="stat">🕒 40+ Hours</span>
                         </div>
-                        <div class="prahar-price">₹1299</div>
+                        <div class="prahar-price">₹1499</div>
                         <button class="cta-button buy-premium-button" data-course="prahar_ancient">Buy & Get Access</button>
                     </div>
                     <!-- PRAHAR BATCH - MEDIEVAL -->
@@ -858,7 +883,7 @@
                             <span class="stat">🎬 30+ Videos</span>
                             <span class="stat">🕒 55+ Hours</span>
                         </div>
-                        <div class="prahar-price">₹1299</div>
+                        <div class="prahar-price">₹1499</div>
                         <button class="cta-button buy-premium-button" data-course="prahar_medieval">Buy & Get Access</button>
                     </div>
                     <!-- PRAHAR BATCH - MODERN -->
@@ -870,7 +895,7 @@
                             <span class="stat">🎬 25+ Videos</span>
                             <span class="stat">🕒 50+ Hours</span>
                         </div>
-                        <div class="prahar-price">₹1299</div>
+                        <div class="prahar-price">₹1499</div>
                         <button class="cta-button buy-premium-button" data-course="prahar_modern">Buy & Get Access</button>
                     </div>
                     <!-- CRASH COURSE -->
@@ -982,6 +1007,7 @@
                     <div class="testimonial-card">
                         <p class="quote">"The way Amit sir teaches is very simple and understandable but very unique. His ability to teach complex historical processes in simple words made me understand every concept, which also helped in learning facts. Amit sir's teaching had the biggest role in my CUET journey."</p>
                         <div class="testimonial-author">
+                            <img src="https://placehold.co/50x50/e0e7ff/3b82f6?text=JS" alt="Jashan Singh">
                             <div class="author-details">
                                 <div class="name">Jashan Singh, JNU</div>
                                 <div class="stars">★★★★★</div>
@@ -991,6 +1017,7 @@
                     <div class="testimonial-card">
                         <p class="quote">"Amit Sir's teaching is phenomenal. His exam insights made all the difference in my CUET PG preparation. The focus on analysis over memorization is what sets CUET HUNTERS apart."</p>
                         <div class="testimonial-author">
+                            <img src="https://placehold.co/50x50/e0e7ff/3b82f6?text=TP" alt="Tuhin Pandey">
                             <div class="author-details">
                                 <div class="name">Tuhin Pandey, AUD</div>
                                 <div class="stars">★★★★★</div>
@@ -1000,6 +1027,7 @@
                      <div class="testimonial-card">
                         <p class="quote">"Covered the syllabus in great detail with extra focus on question solving and pattern. Apart from the classes, personal guidance on calls was also provided frequently. Highly recommended."</p>
                         <div class="testimonial-author">
+                            <img src="https://placehold.co/50x50/e0e7ff/3b82f6?text=AB" alt="Amartya Barman">
                             <div class="author-details">
                                 <div class="name">Amartya Barman, DU</div>
                                 <div class="stars">★★★★★</div>
@@ -1056,7 +1084,7 @@
         <section id="founder">
             <div class="container">
                 <div class="founder-card">
-                    <img src="./images/amitmehra-photo.jpg" alt="Amit Mehra, Founder of CUET HUNTERS">
+                    <img src="images/amitmehra-photo.jpg" alt="Amit Mehra, Founder of CUET HUNTERS">
                     <div class="founder-info">
                         <h2>Meet The Founder</h2>
                         <h3>Amit Mehra</h3>
@@ -1096,57 +1124,6 @@
     </main>
     
     <!-- ======================= FOOTER ======================= -->
- <!-- ======================= PRIVACY POLICY SECTION ======================= -->
-<section id="privacy-policy-section">
-    <div class="container">
-        <h2>Privacy Policy</h2>
-        <p><strong>Last Updated: 10 August 2025</strong></p>
-        <p>CUET HUNTERS ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. This policy is in accordance with the Digital Personal Data Protection Act (DPDPA), 2023, and other relevant Indian laws.</p>
-
-        <h3>1. Information We Collect</h3>
-        <p>We may collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and services, when you participate in activities on the website, or otherwise when you contact us. The personal information we collect may include:</p>
-        <ul>
-            <li><strong>Personal Identification Information:</strong> Name, email address, phone number.</li>
-            <li><strong>Payment Data:</strong> We may collect data necessary to process your payment if you make purchases, such as your payment instrument number (such as a credit card number), and the security code associated with your payment instrument. All payment data is stored by our payment processor.</li>
-        </ul>
-
-        <h3>2. Use of Your Information</h3>
-        <p>We use the information we collect or receive:</p>
-        <ul>
-            <li>To facilitate account creation and logon process.</li>
-            <li>To process your transactions and manage your orders.</li>
-            <li>To send you administrative information, such as changes to our terms, conditions, and policies.</li>
-            <li>To respond to your inquiries and solve any potential issues you might have with the use of our Services.</li>
-        </ul>
-
-        <h3>3. Consent</h3>
-        <p>By using our website and providing your personal data, you provide your explicit consent to the collection, processing, and storage of your data as described in this policy. You have the right to withdraw your consent at any time by contacting us.</p>
-
-        <h3>4. Your Rights</h3>
-        <p>As per the DPDPA, 2023, you have the following rights:</p>
-        <ul>
-            <li>The right to access your personal data.</li>
-            <li>The right to correct or erase your personal data.</li>
-            <li>The right to data portability.</li>
-            <li>The right to nominate an individual to exercise your rights in case of death or incapacity.</li>
-        </ul>
-        <p>To exercise these rights, please contact our Grievance Officer.</p>
-
-        <h3>5. Data Security</h3>
-        <p>We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, please also remember that we cannot guarantee that the internet itself is 100% secure.</p>
-
-        <h3>6. Grievance Officer</h3>
-        <p>In accordance with the Information Technology Act 2000 and rules made thereunder, the name and contact details of the Grievance Officer are provided below:</p>
-        <p>
-            <strong>Name:</strong> Amit Mehra<br>
-            <strong>Email:</strong> mehraamit1784@gmail.com<br>
-            <strong>Address:</strong> P.G. Men's Hostel, University Road, Delhi, 110007
-        </p>
-
-        <h3>7. Changes to This Privacy Policy</h3>
-        <p>We may update this privacy policy from time to time. The updated version will be indicated by an updated "Last Updated" date and the updated version will be effective as soon as it is accessible.</p>
-    </div>
-</section>
     <footer id="contact">
         <div class="container footer-container">
             <div class="footer-column">
@@ -1160,6 +1137,7 @@
                     <li><a href="#prahar-batch-section">PRAHAR Batch</a></li>
                     <li><a href="#mock-tests-section">Mock Tests</a></li>
                     <li><a href="#testimonials">Success Stories</a></li>
+                    <li><a href="#" data-popup-open="privacy-popup">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -1211,6 +1189,60 @@
         </div>
     </div>
 
+    <div id="privacy-popup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn" data-popup-close="privacy-popup">&times;</span>
+            <h2>Privacy Policy</h2>
+            <div class="privacy-content-inner">
+                <p><strong>Last Updated: 10 August 2025</strong></p>
+                <p>CUET HUNTERS ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. This policy is in accordance with the Digital Personal Data Protection Act (DPDPA), 2023, and other relevant Indian laws.</p>
+
+                <h3>1. Information We Collect</h3>
+                <p>We may collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and services, when you participate in activities on the website, or otherwise when you contact us. The personal information we collect may include:</p>
+                <ul>
+                    <li><strong>Personal Identification Information:</strong> Name, email address, phone number.</li>
+                    <li><strong>Payment Data:</strong> We may collect data necessary to process your payment if you make purchases, such as your payment instrument number (such as a credit card number), and the security code associated with your payment instrument. All payment data is stored by our payment processor.</li>
+                </ul>
+
+                <h3>2. Use of Your Information</h3>
+                <p>We use the information we collect or receive:</p>
+                <ul>
+                    <li>To facilitate account creation and logon process.</li>
+                    <li>To process your transactions and manage your orders.</li>
+                    <li>To send you administrative information, such as changes to our terms, conditions, and policies.</li>
+                    <li>To respond to your inquiries and solve any potential issues you might have with the use of our Services.</li>
+                </ul>
+
+                <h3>3. Consent</h3>
+                <p>By using our website and providing your personal data, you provide your explicit consent to the collection, processing, and storage of your data as described in this policy. You have the right to withdraw your consent at any time by contacting us.</p>
+
+                <h3>4. Your Rights</h3>
+                <p>As per the DPDPA, 2023, you have the following rights:</p>
+                <ul>
+                    <li>The right to access your personal data.</li>
+                    <li>The right to correct or erase your personal data.</li>
+                    <li>The right to data portability.</li>
+                    <li>The right to nominate an individual to exercise your rights in case of death or incapacity.</li>
+                </ul>
+                <p>To exercise these rights, please contact our Grievance Officer.</p>
+
+                <h3>5. Data Security</h3>
+                <p>We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, please also remember that we cannot guarantee that the internet itself is 100% secure.</p>
+
+                <h3>6. Grievance Officer</h3>
+                <p>In accordance with the Information Technology Act 2000 and rules made thereunder, the name and contact details of the Grievance Officer are provided below:</p>
+                <p>
+                    <strong>Name:</strong> Amit Mehra<br>
+                    <strong>Email:</strong> mehraamit1784@gmail.com<br>
+                    <strong>Address:</strong> P.G. Men's Hostel, University Road, Delhi, 110007
+                </p>
+
+                <h3>7. Changes to This Privacy Policy</h3>
+                <p>We may update this privacy policy from time to time. The updated version will be indicated by an updated "Last Updated" date and the updated version will be effective as soon as it is accessible.</p>
+            </div>
+        </div>
+    </div>
+
 
     <script>
         // --- Tabs Script for Free Resources ---
@@ -1230,10 +1262,12 @@
         const enrollButtons = document.querySelectorAll('.enroll-button');
         const downloadButtons = document.querySelectorAll('.download-button');
         const videoCards = document.querySelectorAll('.video-card');
+        const privacyLink = document.querySelector('a[data-popup-open="privacy-popup"]');
         
         const whatsappPopup = document.getElementById('whatsapp-popup');
         const pdfPopup = document.getElementById('pdf-popup');
         const videoPopup = document.getElementById('video-popup');
+        const privacyPopup = document.getElementById('privacy-popup');
         
         const pdfPopupLink = document.getElementById('pdf-popup-link');
         const videoPlayerContainer = document.getElementById('video-player-container');
@@ -1276,7 +1310,12 @@
                 }
             });
         });
-
+        
+        // Open Privacy Policy popup
+        privacyLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            privacyPopup.style.display = 'flex';
+        });
 
         // Close any popup
         const closePopup = (popupElement) => {
@@ -1371,5 +1410,4 @@
     </script>
 
 </body>
-
 </html>
