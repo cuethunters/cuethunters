@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Mock Tests - CUET HUNTERS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Inherited Global Styles --- */
+        :root {
+            --primary-color: #3b82f6;
+            --primary-color-dark: #2563eb;
+            --secondary-color: #f4f4f5;
+            --dark-color: #1e293b;
+            --text-color: #475569;
+            --white-color: #ffffff;
+            --border-color: #e5e7eb;
+            --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+        h1, h2, h4 {
+            font-family: 'Merriweather', serif;
+            color: var(--dark-color);
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+        .cta-button {
+            background-color: #ef4444; /* Red for locked */
+            color: var(--white-color) !important;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background-color: #dc2626;
+        }
+
+        /* --- Page-Specific Styles --- */
+        .item-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 60px;
+        }
+        .item-card {
+            background: var(--white-color);
+            border-radius: 12px;
+            box-shadow: var(--shadow-light);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+        .item-card::before {
+            content: '🔒';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            opacity: 0.2;
+        }
+        .item-card h4 {
+             text-align: left;
+             margin-bottom: 10px;
+        }
+        .item-card p {
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 60px;
+            color: var(--primary-color);
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        /* --- Popup Styles --- */
+        .popup-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none; justify-content: center; align-items: center; z-index: 2000;
+        }
+        .popup-content {
+            background: var(--white-color); padding: 40px; border-radius: 10px;
+            text-align: center; position: relative; max-width: 450px; width: 90%;
+        }
+        .close-btn {
+            position: absolute; top: 10px; right: 15px; font-size: 2.5rem;
+            cursor: pointer; color: var(--text-color);
+        }
+        .popup-whatsapp-btn {
+            background-color: #25D366; color: white; padding: 15px 25px;
+            border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Premium Mock Test Series</h2>
+
+        <div class="item-grid">
+            
+            <div class="item-card">
+                <div>
+                    <h4>Full-Length Mock Test 1</h4>
+                    <p>Covers the complete Ancient History syllabus as per the latest CUET pattern.</p>
+                </div>
+                <button class="cta-button unlock-button">Unlock Now</button>
+            </div>
+
+            <div class="item-card">
+                <div>
+                    <h4>Full-Length Mock Test 2</h4>
+                    <p>A comprehensive test on Medieval Indian History, from the Sultanate to the Mughals.</p>
+                </div>
+                <button class="cta-button unlock-button">Unlock Now</button>
+            </div>
+
+            <div class="item-card">
+                <div>
+                    <h4>Full-Length Mock Test 3</h4>
+                    <p>Focuses on Modern Indian History, with an emphasis on the National Movement.</p>
+                </div>
+                <button class="cta-button unlock-button">Unlock Now</button>
+            </div>
+            
+            <div class="item-card">
+                <div>
+                    <h4>Full-Length Mock Test 4</h4>
+                    <p>A mixed mock test covering important questions from all three historical periods.</p>
+                </div>
+                <button class="cta-button unlock-button">Unlock Now</button>
+            </div>
+
+        </div>
+
+        <a href="../index.html" class="back-link">← Back to Paid Materials</a>
+    </div>
+
+    <!-- WhatsApp Popup HTML -->
+    <div id="whatsapp-popup" class="popup-overlay">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Unlock This Material</h2>
+            <p>To get access to our premium materials and receive the best offer, contact us directly on WhatsApp.</p>
+            <a href="https://wa.me/919053474768?text=Hi%2C%20I'm%20interested%20in%20unlocking%20the%20premium%20mock%20tests." target="_blank" class="popup-whatsapp-btn">Contact on WhatsApp</a>
+        </div>
+    </div>
+
+    <script>
+        const unlockButtons = document.querySelectorAll('.unlock-button');
+        const whatsappPopup = document.getElementById('whatsapp-popup');
+        const closeBtn = whatsappPopup.querySelector('.close-btn');
+
+        const openPopup = () => {
+            whatsappPopup.style.display = 'flex';
+        };
+
+        const closePopup = () => {
+            whatsappPopup.style.display = 'none';
+        };
+
+        unlockButtons.forEach(btn => btn.addEventListener('click', openPopup));
+        closeBtn.addEventListener('click', closePopup);
+        whatsappPopup.addEventListener('click', (e) => {
+            if (e.target === whatsappPopup) {
+                closePopup();
+            }
+        });
+    </script>
+
+</body>
+</html>
